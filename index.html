@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Asking out on a date !</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="propose.css">
+    </head>
+    <body>
+        <form id="f">
+           <h3>Will u go on a date with me ?</h3> <br><br>
+            <input id="ans" type="text" placeholder="Type ur answer"><br></br>
+            
+           <input id="btn" type="submit" value="Must be yes...Right?!" onclick="anscheck()">
+          <form>
+            
+            <p id="comments"></p>
+            <div id="imgdiv"></div>
+            
+        
+        <script>
+            var myform=document.getElementById("f");
+            myform.addEventListener('submit',function(event) {
+                event.preventDefault();
+                var imgdiv=document.getElementById('imgdiv');
+                var myimg=document.createElement('img');
+                myimg.src="https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif"
+
+                myimg.alt="Me cri cri";
+                myimg.width="300"
+                var ans=document.getElementById("ans").value;
+                console.log(ans,typeof(ans));
+                var modans=ans.toUpperCase();
+                var pat=/YES/g;
+                console.log(modans,typeof(ans));
+                if(modans.match(pat)){
+                //   document.getElementById("comments").innerHTML="I saw a yes! A WIN IS A WIN .<br>You are coming on a date with me ";
+                window.location.href="propose2.html"
+                }
+                  else{
+                    document.getElementById("ans").value="";
+                    document.getElementById("comments").innerHTML="You dont love me?&#x1F641;<br>Ab fast fast 'yes' type karo!";
+                    imgdiv.innerHTML="";
+                    imgdiv.appendChild(myimg);
+                    document.getElementById('btn').value="I should Love my gf more button";
+                  }
+                });
+        </script>
+    </body>
+    <footer>
+        &copy made with love for u boo!&#x2764;
+    </footer>
+</html>
