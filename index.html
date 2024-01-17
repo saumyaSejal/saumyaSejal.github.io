@@ -1,56 +1,191 @@
 <!DOCTYPE html>
-
+   <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Asking out on a date !</title>
+        <title>Saumya Sejal </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="propose.css">
+        <link rel="stylesheet" href="profile.css">
+        <link rel="icon" type="image/x-icon" href="favicon_package_v0.16/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,800;1,900&family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <form id="f">
-           <h3>Will u go on a date with me ?</h3> <br><br>
-            <input id="ans" type="text" placeholder="Type ur answer"><br></br>
+    <!-- <style>
+        body{
+            background-color:#212121;
+            margin:0px;
+            padding:0px;
+        }
+        nav{
             
-           <input id="btn" type="submit" value="Must be yes...Right?!" onclick="anscheck()">
-          <form>
-            
-            <p id="comments"></p>
-            <div id="imgdiv"></div>
-            
-        
-        <script>
-            var myform=document.getElementById("f");
-            myform.addEventListener('submit',function(event) {
-                event.preventDefault();
-                var imgdiv=document.getElementById('imgdiv');
-                var myimg=document.createElement('img');
-                myimg.src="https://media.giphy.com/media/3o6wrvdHFbwBrUFenu/giphy.gif"
+            text-align: center;
+            background:#303030;
+            display:block;
+            width:100vw;
+            margin:0px;
+            height:36px;
+            align-items:center;
+            padding:12px;
+            z-index:1;
+            /* position:absolute; */
 
-                myimg.alt="Me cri cri";
-                myimg.width="300"
-                var ans=document.getElementById("ans").value;
-                console.log(ans,typeof(ans));
-                var modans=ans.toUpperCase();
-                var pat=/YES/g;
-                console.log(modans,typeof(ans));
-                if(modans.match(pat)){
-                //   document.getElementById("comments").innerHTML="I saw a yes! A WIN IS A WIN .<br>You are coming on a date with me ";
-                window.location.href="propose2.html"
-                }
-                  else{
-                    document.getElementById("ans").value="";
-                    document.getElementById("comments").innerHTML="You dont love me?&#x1F641;<br>Ab fast fast 'yes' type karo!";
-                    imgdiv.innerHTML="";
-                    imgdiv.appendChild(myimg);
-                    document.getElementById('btn').value="I should Love my gf more button";
-                  }
-                });
-        </script>
+        }
+        nav li{
+            display:inline;
+            
+            font-family: 'Nanum Gothic', sans-serif;
+            padding:12px;
+            /* padding:24px 12px; */
+            /* padding-top:24px; */
+            
+            
+
+        }
+        nav li a{
+            color:#c19781;
+            text-decoration: none;
+            padding-top:12px;
+
+        }
+
+        nav li a:hover{
+            font-weight:800;
+        }
+
+        #blurbg{
+            background-image: url(images/WhatsApp\ Image\ 2023-10-02\ at\ 19.32.21_308f1c4a.jpg);
+            background-repeat: repeat-x;
+            height:10cm;
+            width:100vw;
+            padding:10px;
+            filter: blur(8px);
+            z-index: -1;
+            position: absolute;
+            top:48px;
+            /* left:100px; */
+            
+        }
+
+        #banner{
+            
+            height:max-content;
+            width:fit-content;
+            /* width:100vw; */
+            display:flex;
+            align-items:center;
+            /* float:center; */
+            
+            background:transparent;
+            background-repeat: repeat-x;
+            filter: none;
+            z-index: 1;
+            
+            
+
+            
+            
+
+        }
+
+        #profileimg{
+            margin: 10px 36px;
+            /* border: solid 1px black; */
+            /* background-image: url(images/WhatsApp\ Image\ 2023-10-02\ at\ 19.32.21_308f1c4a.jpg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+            /* filter: blur(8px); */
+        }
+
+        #bannerimg{
+            height:9cm;
+            margin:0 120px;
+            border-radius:10px;
+
+            
+        }
+        #bannercontent{
+            height:max-content;
+            
+        }
+
+        #bannercontent h1{
+            font-weight:100;
+            font-family: 'Montserrat', sans-serif;
+            color:#f5f6f0;
+            /* color: #c19781; */
+            font-size: 32pt;
+
+
+        }
+
+        #bannercontent p{
+            
+            font-family: 'Nanum Gothic', sans-serif;
+            color:#aecd61;
+        }
+        #bannercontent a{
+            text-decoration: none;
+            color:#d8c2a7;
+            padding:8px;
+        }
+
+        #bannercontent a:hover{
+            text-decoration: underline;
+        }
+        #name{
+           font-weight: 600;
+        }
+
+        .bannerdivs{
+            display:inline-block;
+            padding:12px;
+            margin-left:200px;
+        }
+    </style> -->
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me </a></li>
+                <li><a href="#skills">Things I know</a></li>
+                <li><a href="#certifications">Some Courses I did </a></li>
+                <li><a href="#Contact me ">Lets Connect!</a></li>
+                <li><a href="#resume">Resume</a></li>
+
+            </ul>
+        </nav>
+       <div id="blurbg"></div>
+        <div id="banner">
+            <div id="bannercontent" class="bannerdivs">
+                <h1>Hi!<br>I am <b id="name">Saumya Sejal</b></h1>
+                <P id="desc"> B.Tech(Comp Sci & Engg) , 4<sup>th</sup> Year , VIT Vellore </P>
+                
+                <p><a href="https://www.linkedin.com/in/saumya-sejal-246b82223/" target="_blank">LinkedIn</a> | <a href="mailto:saumya.sejal2020@vitstudent.ac.in">saumya.sejal2020@vitstudent.ac.in</a></p>
+            </div>
+    
+            <div id="profileimg" class="bannerdivs">
+                <img id="bannerimg" src="images/WhatsApp Image 2023-10-02 at 19.32.21_308f1c4a.jpg" alt="saumya sejal">
+            </div>
+    
+           </div>
+       
+
+       <div id="about"></div>
+
+       <div id="skills"></div>
+
+       <div id="certifications"></div>
+       <div id="contact"></div>
+        
+        <script src="" async defer></script>
     </body>
-    <footer>
-        &copy made with love for u boo!&#x2764;
-    </footer>
 </html>
