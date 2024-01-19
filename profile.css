@@ -62,7 +62,7 @@ nav li a:hover{
     display:flex;
     align-items:center;
     /* float:center; */
-    position:absolute;
+    /* position:absolute; */
     background:transparent;
     background-repeat: repeat-x;
     filter: none;
@@ -129,8 +129,57 @@ nav li a:hover{
     display:inline-block;
     padding:12px;
     margin-left:200px;
+    animation: flyin 1 linear;
+    animation-delay: 1s;
+}
+#about{
+    display:block;
+    width:100vw;
+    margin:56px 60px;
+    /* margin-right:0px; */
+    /* margin-top:36px; */
+
+}
+#aboutcontent h2{
+    color:#aecd61;
+    font-size:24px;
+    /* text-decoration: underline; */
 }
 
+#aboutcontent{
+    display:inline-block;
+    width:15cm;
+    padding:72px 36px;
+    /* border:1px solid #aecd61; */
+    color:#d8c2a7;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left:80px;
+    margin-top:10px;
+    font-size:18px;
+    /* position: absolute; */
+}
+
+#aboutmepicture{
+    display:inline-block;
+    width:10cm;
+    
+    height:6.1cm;
+    padding:0 12px;
+    margin-right:0;
+    /* margin-top:1cm; */
+    margin-left:20px;
+    position: absolute;
+    
+
+}
+
+#circle img {
+   height: 10cm;
+   /* margin-left:40px; */
+   
+   
+   
+}
 @keyframes flyin{
     from{
         opacity:0.25;
