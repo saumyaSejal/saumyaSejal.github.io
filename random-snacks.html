@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Nashta Picker</title>
+    <!-- <meta name="description" content=""> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images\food\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style\random.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    #loading {
+        display: none;
+        position: absolute;
+        margin-left:25rem;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        /* mix-blend-mode: multiply; */
+        height:5rem;
+        width:5rem;
+    }
+    #pic {
+        display: none;
+    }
+</style>
+<body>
+    <div id="navbar">
+        <p id="contact"><a href="#footer">Contact Me</a></p>
+    </div>
+    <center>
+        <div id="loading">
+            <img src="images/food/catering.gif" alt="Loading...">
+        </div>
+        <h3 id="heading">Decide Your नाश्ता !</h3>
+    <div class="mainFrame">
+        <div id="warning">
+
+        </div>
+        <div id="picker">
+            <div id="pic">
+
+            </div>
+            <p id="content">Click the button to generate random <br> <i>Nashta</i></p>
+        </div>
+        <div class="button">
+            <button id="generate_button">Generate</button>
+        </div>
+    </div>
+</center>
+
+
+
+    <!-- <script>
+
+        var today=new Date();
+        var day=today.getDay();
+
+        var loading = document.getElementById('loading');
+        var snacksobj={
+            'samosa':"images/food/samosa.png",
+            'momo':"images/food/momo.png",
+            'roll':"images/food/roll.jpeg",
+            'batata puri':"images/food/batatapuri.jpeg",
+            'chowmein':"images/food/ramen.png",
+            'chowmein samosa':"images/food/chowmein-samosa.jpg",
+            'pizza':"images/food/pizza.png",
+            'KFC':"images/food/fried-chicken.png",
+            'paneer/chicken chilli':"images/food/orange-chicken.png",
+            'fried rice':"images/food/fried-rice.png",
+            'samosa chat':"images/food/samosa (1).png",
+            'phuchka':"images/food/pani-puri.png",
+            'dosa':"images/food/dosa.png"
+        }; 
+
+        var snacksArr = ['samosa', 'momo', 'roll', 'batata puri', 'chowmein', 'chowmein samosa', 'pizza', 'KFC', 'paneer/chicken chilli', 'fried rice', 'samosa chat', 'phuchka','dosa'];
+
+        var btn = document.getElementById('generate_button');
+        var picdiv=document.getElementById('pic');
+        var foodimg=document.createElement('img');
+        var warning=document.getElementById("warning");
+        foodimg.width=100;
+        
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            // Show loading GIF
+    loading.style.display = 'block';
+    picdiv.style.display = 'none';
+    
+    // Hide warning
+    warning.innerHTML = '';
+
+            if(day==4){
+                document.getElementById("warning").innerHTML="Today is <b>Thursday</b>.You might prefer Veg!🟩"
+                warning .style.backgoundColor="#FFD93D"
+            }
+            else if(day==6){
+                document.getElementById("warning").innerHTML="Today is <b>Saturday</b>.You might prefer Veg!🟩"
+                document.getElementById("warning").backgoundColor="#FFD93D"
+            }
+            else if(day==3){
+                document.getElementById("warning").innerHTML="Today is <b>Wednesday</b>.KFC🍗 and Domisnoes🍕  have ✨Discount✨!!"
+                document.getElementById("warning").backgoundColor="#C7D36F"
+            }
+            var n = Math.floor(Math.random() * snacksArr.length); 
+
+            var res = snacksArr[n];
+
+            // Show loading GIF for 2 seconds
+    loading.style.display = 'block';
+    setTimeout(() => {
+        loading.style.display = 'none';
+        
+        // Show food image and content
+        foodimg.src = snacksobj[res];
+        foodimg.alt = "Oh Snap!";
+        picdiv.appendChild(foodimg);
+        document.getElementById("content").innerHTML = res.toUpperCase();
+        picdiv.style.display = 'block';
+    }, 2000);
+    document.getElementById("content").style.color = '#383838';
+});
+
+
+            // foodimg.src=snacksobj[res];
+            // foodimg.alt="Oh Snap!";
+            // picdiv.appendChild(foodimg);
+
+
+            // document.getElementById("content").innerHTML = res.toUpperCase();
+            // document.getElementById("content").style.color='#383838';
+
+
+        });
+    </script> -->
+
+    <script>
+
+        var today = new Date();
+        var day = today.getDay();
+        
+        var loading = document.getElementById('loading');
+        var snacksobj = {
+            'samosa': "images/food/samosa.png",
+            'momo': "images/food/momo.png",
+            'roll': "images/food/roll.jpeg",
+            'batata puri': "images/food/batatapuri.jpeg",
+            'chowmein': "images/food/ramen.png",
+            'chowmein samosa': "images/food/chowmein-samosa.jpg",
+            'pizza': "images/food/pizza.png",
+            'KFC': "images/food/fried-chicken.png",
+            'paneer/chicken chilli': "images/food/orange-chicken.png",
+            'fried rice': "images/food/fried-rice.png",
+            'samosa chat': "images/food/samosa (1).png",
+            'phuchka': "images/food/pani-puri.png",
+            'dosa': "images/food/dosa.png"
+        }; 
+        
+        var snacksArr = ['samosa', 'momo', 'roll', 'batata puri', 'chowmein', 'chowmein samosa', 'pizza', 'KFC', 'paneer/chicken chilli', 'fried rice', 'samosa chat', 'phuchka', 'dosa'];
+        
+        var btn = document.getElementById('generate_button');
+        var picdiv = document.getElementById('pic');
+        var foodimg = document.createElement('img');
+        var warning = document.getElementById("warning");
+        foodimg.width = 100;
+        
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+        
+            // Show loading GIF
+            loading.style.display = 'block';
+            picdiv.style.display = 'none';
+        
+            // Hide warning
+            warning.innerHTML = '';
+        
+            if (day == 4) {
+                document.getElementById("warning").innerHTML = "Today is <b>Thursday</b>. You might prefer Veg!🟩";
+                warning.style.backgroundColor = "#FFD93D";
+            } else if (day == 6) {
+                document.getElementById("warning").innerHTML = "Today is <b>Saturday</b>. You might prefer Veg!🟩";
+                warning.style.backgroundColor = "#FFD93D";
+            } else if (day == 3) {
+                document.getElementById("warning").innerHTML = "Today is <b>Wednesday</b>. KFC🍗 and Dominoes🍕 have ✨Discounts✨!!";
+                warning.style.backgroundColor = "#C7D36F";
+            }
+        
+            var n = Math.floor(Math.random() * snacksArr.length);
+            var res = snacksArr[n];
+        
+            // Show loading GIF for 2 seconds
+            setTimeout(() => {
+                // Hide loading GIF
+                loading.style.display = 'none';
+        
+                // Show food image and content
+                foodimg.src = snacksobj[res];
+                foodimg.alt = "Oh Snap!";
+                picdiv.appendChild(foodimg);
+                document.getElementById("content").innerHTML = res.toUpperCase();
+                picdiv.style.display = 'block';
+            }, 2000);
+        
+            document.getElementById("content").style.color = '#383838';
+        });
+        
+        </script>
+        
+</body>
+<footer id="footer">
+    <p id="madeby">Made by Saumya Sejal</p> 
+    <li>
+        💌-<a href="mailto:saumya.sejal2020@vitstudent.ac.in">saumya.sejal2020@vitstudent.ac.in</a>
+
+    </li>
+</footer>
+</html>

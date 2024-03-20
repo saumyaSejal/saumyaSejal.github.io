@@ -1,0 +1,112 @@
+body{
+    background-color: #F6F1E9;
+}
+
+#navbar{
+    width: 100vw;
+    height:5vw;
+    /* background-color: #FFF67E; */
+    color:#FFD93D;
+    position:absolute;
+    margin:0;
+}
+
+#contact a{
+    display:block;
+    margin-left:85vw;
+    border:1px solid #FFD93D;
+    border-radius:3%;
+    width:max-content;
+    padding:1%;
+    position: relative;
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    color:#FFD93D;
+    
+}
+
+.mainFrame{
+    margin-top:20dvh;
+}
+
+#heading{
+    color:#FF8400;
+    font-size:3rem;
+    /* margin-top:30%; */
+    /* font-family: "Edu NSW ACT Foundation", cursive; */
+    font-family: "Josefin Sans", sans-serif;
+    padding:0.2rem;
+    margin:0;
+}
+
+#content{
+    color:#C7D36F;
+    font-size: 2rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight:600;
+    opacity:80%;
+
+
+}
+
+#generate_button{
+    background-color:#FFD93D;
+    color:black;
+    border:0;
+    padding:1.5dvh;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+#warning{
+    /* background-color: #FFD93D;
+    border:solid 0.5rem #FFD93D; */
+    padding:0.2rem;
+    text-align: center;
+    color:crimson;
+    width:max-content;
+    margin:0.1rem;
+    margin-bottom: 2rem;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size: 1rem;
+
+}
+
+#pic img{
+    border-radius:100%;
+    height:10rem;
+    width:10rem;
+    mix-blend-mode: multiply;
+    border: solid 0.2rem #9EB23B;
+}
+
+footer{
+    background-color: #C7D36F;
+    color:#F6F1E9;
+    height:max-content;
+    text-align: center;
+    padding:2rem;
+    width:100vw;
+    margin-top:8rem;
+
+}
+
+#madeby{
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-size:1.6rem;
+
+}
+
+footer a{
+    text-decoration: none;
+    color:#9EB23B;
+    font-family: "Josefin Sans", sans-serif;
+    font-size:2rem;
+}
+
+footer li{
+    display:inline;
+}

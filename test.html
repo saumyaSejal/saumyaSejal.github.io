@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Food Generator</title>
+<style>
+    #loading {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+    #pic {
+        display: none;
+    }
+</style>
+</head>
+<body>
+<button id="generate_button">Generate Random Food</button>
+<div id="loading">
+    <img src="images/food/catering.gif" alt="Loading...">
+</div>
+<div id="pic"></div>
+<p id="content"></p>
+<p id="warning"></p>
+<script>
+
+var today = new Date();
+var day = today.getDay();
+
+var snacksobj = {
+    'samosa': "images/food/samosa.png",
+    'momo': "images/food/momo.png",
+    'roll': "images/food/roll.jpeg",
+    'batata puri': "images/food/batatapuri.jpeg",
+    'chowmein': "images/food/ramen.png",
+    'chowmein samosa': "images/food/chowmein-samosa.jpg",
+    'pizza': "images/food/pizza.png",
+    'KFC': "images/food/fried-chicken.png",
+    'paneer/chicken chilli': "images/food/orange-chicken.png",
+    'fried rice': "images/food/fried-rice.png",
+    'samosa chat': "images/food/samosa (1).png",
+    'phuchka': "images/food/pani-puri.png",
+    'dosa': "images/food/dosa.png"
+}; 
+
+var snacksArr = ['samosa', 'momo', 'roll', 'batata puri', 'chowmein', 'chowmein samosa', 'pizza', 'KFC', 'paneer/chicken chilli', 'fried rice', 'samosa chat', 'phuchka','dosa'];
+
+var btn = document.getElementById('generate_button');
+var picdiv = document.getElementById('pic');
+var loading = document.getElementById('loading');
+var foodimg = document.createElement('img');
+var warning = document.getElementById("warning");
+foodimg.width = 100;
+
+btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    
+    // Show loading GIF
+    loading.style.display = 'block';
+    picdiv.style.display = 'none';
+    
+    // Hide warning
+    warning.innerHTML = '';
+
+    if (day == 4 || day == 6) {
+        warning.innerHTML = "Today is <b>" + (day == 4 ? "Thursday" : "Saturday") + "</b>. You might prefer Veg! 🟩";
+        warning.style.backgroundColor = "#FFD93D";
+    } else if (day == 3) {
+        warning.innerHTML = "Today is <b>Wednesday</b>. KFC 🍗 and Dominos 🍕 have ✨ Discount ✨!!";
+        warning.style.backgroundColor = "#C7D36F";
+    }
+    
+    var n = Math.floor(Math.random() * snacksArr.length); 
+    var res = snacksArr[n];
+    
+    // Show loading GIF for 2 seconds
+    loading.style.display = 'block';
+    setTimeout(() => {
+        loading.style.display = 'none';
+        
+        // Show food image and content
+        foodimg.src = snacksobj[res];
+        foodimg.alt = "Oh Snap!";
+        picdiv.appendChild(foodimg);
+        document.getElementById("content").innerHTML = res.toUpperCase();
+        picdiv.style.display = 'block';
+    }, 2000);
+    document.getElementById("content").style.color = '#383838';
+});
+
+</script>
+</body>
+</html>
