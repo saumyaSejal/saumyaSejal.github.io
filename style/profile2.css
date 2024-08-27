@@ -1,0 +1,223 @@
+.darkbody {
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    color: #d8c2a7;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+}
+
+.darknav {
+    text-align: center;
+    background: #303030;
+    width: 100%;
+    height: 12vh;
+    padding: 1.5vh;
+    z-index: 1;
+}
+
+.darknav li {
+    display: inline;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 1.5vh;
+}
+
+.darknav li a {
+    color: #c19781;
+    text-decoration: none;
+    padding-top: 12px;
+}
+
+.darknav li a:hover {
+    font-weight: 800;
+}
+
+#blurbg {
+    background-image: url(images/WhatsApp\ Image\ 2023-10-02\ at\ 19.32.21_308f1c4a.jpg);
+    background-repeat: repeat-x;
+    height: 30vh;
+    width: 100%;
+    padding: 2vh;
+    filter: blur(8px);
+    z-index: -1;
+    position: absolute;
+    top: 10vh;
+    animation: flyin 1.2s linear;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    filter: none;
+    z-index: 1;
+    animation: flyin 1.2s linear;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#profileimg {
+    margin: 2vh 3vw;
+}
+
+#bannerimg {
+    height: 25vh;
+    margin: 0 10vw;
+    border-radius: 10px;
+}
+
+#bannercontent h1 {
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    color: #f5f6f0;
+    font-size: 2rem;
+}
+
+#bannercontent p {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #aecd61;
+}
+
+#bannercontent a {
+    text-decoration: none;
+    color: #d8c2a7;
+    padding: 0.5rem;
+}
+
+#bannercontent a:hover {
+    text-decoration: underline;
+}
+
+#name {
+    font-weight: 600;
+}
+
+.bannerdivs {
+    display: inline-block;
+    padding: 2vh;
+    margin-left: 10vw;
+    animation: flyin 1s linear;
+    animation-delay: 1s;
+}
+
+.darkcontent {
+    width: 90%;
+    padding: 5vh 5vw;
+    line-height: 1.6;
+    margin: 4vh auto;
+    animation: flyin 1.8s linear;
+}
+
+.darkcontent p {
+    margin-left: 4vw;
+}
+
+.subheading {
+    color: #aecd61;
+    font-size: 1.5rem;
+}
+
+.skilltopic {
+    margin-right: 4vw;
+    padding: 1rem;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+    max-width: 90%;
+    padding: 5vh;
+}
+
+#aboutcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutmepicture img {
+    width: 20vw;
+    height: auto;
+    border-radius: 50%;
+}
+
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vw;
+}
+
+#skillimages img {
+    width: 45%;
+    mix-blend-mode: multiply;
+}
+
+#skillcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 48%;
+    padding: 1vh;
+}
+
+#skillimages {
+    padding-top: 5vh;
+}
+
+#publication a {
+    color: #aecd61;
+    margin: 0.5rem;
+    text-decoration: underline;
+}
+
+#resumedownload {
+    background-color: #aecd61;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem;
+    border: solid #aecd61 0.1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+@keyframes flyin {
+    from {
+        opacity: 0.25;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 10vh;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #blurbg, .darknav, #banner, .darkcontent, #about {
+        padding: 2vh 2vw;
+    }
+
+    #bannerimg {
+        height: 20vh;
+        margin: 0 5vw;
+    }
+
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    #aboutmepicture img {
+        width: 50vw;
+    }
+
+    #skills {
+        grid-template-columns: 1fr;
+    }
+
+    #skillimages img {
+        width: 90%;
+    }
+}
