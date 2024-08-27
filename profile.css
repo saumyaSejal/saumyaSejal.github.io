@@ -1,249 +1,254 @@
-.darkbody{
-    background-color:#212121;
-    margin:0px;
-    padding:0px;
-    /* text-align: center; */
-    
-    /* border:1px solid #aecd61; */
-    color:#d8c2a7;
+/* General styles */
+.darkbody {
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    color: #d8c2a7;
     font-family: 'Nanum Gothic', sans-serif;
-    align-content: center;
 }
-.darknav{
-    
+
+.darknav {
     text-align: center;
-    background:#303030;
-    display:block;
-    width:100vw;
-    margin:0px;
-    height:12vh;
-    align-items:center;
-    padding:1em;
-    z-index:1;
-    /* position:absolute; */
-
+    background: #303030;
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 12vh;
+    align-items: center;
+    padding: 1em;
+    z-index: 1;
 }
-.darknav li{
-    display:inline;
-    
+
+.darknav li {
+    display: inline;
     font-family: 'Nanum Gothic', sans-serif;
-    padding:1em;
-    /* padding:24px 12px; */
-    /* padding-top:24px; */
-    
-    
-
+    padding: 1em;
 }
-.darknav li a{
-    color:#c19781;
+
+.darknav li a {
+    color: #c19781;
     text-decoration: none;
-    padding-top:1em;
-
+    padding-top: 1em;
 }
 
-.darknav li a:hover{
-    font-weight:800;
+.darknav li a:hover {
+    font-weight: 800;
 }
 
-#blurbg{
+#blurbg {
     background-image: url(images/WhatsApp\ Image\ 2023-10-02\ at\ 19.32.21_308f1c4a.jpg);
     background-repeat: repeat-x;
-    height:64vh;
-    width:100vw;
-    padding:0.8em;
+    height: 64vh;
+    width: 100%;
+    padding: 0.8em;
     filter: blur(8px);
     z-index: -1;
     position: absolute;
-    top:4em;
-    /* left:100px; */
+    top: 4em;
     animation: flyin 1.2s linear;
-    
 }
 
-#banner{
-    
-    height:max-content;
-    width:fit-content;
-    /* width:100vw; */
-    display:flex;
-    align-items:center;
-    /* float:center; */
-    /* position:absolute; */
-    background:transparent;
-    background-repeat: repeat-x;
+#banner {
+    display: flex;
+    align-items: center;
+    background: transparent;
     filter: none;
     z-index: 1;
     animation: flyin 1.2s linear;
-    
-    
-
-    
-    
-
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em 0;
 }
 
-#profileimg{
+#profileimg {
     margin: 0.8em 3em;
-    /* border: solid 1px black; */
-    /* background-image: url(images/WhatsApp\ Image\ 2023-10-02\ at\ 19.32.21_308f1c4a.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* filter: blur(8px); */
 }
 
-#bannerimg{
-    height:56vh;
-    margin:0 10em;
-    border-radius:0.8em;
-
-    
-}
-#bannercontent{
-    height:max-content;
-    
+#bannerimg {
+    height: 42vh;
+    max-width: 80vw;
+    margin: 0 2em;
+    border-radius: 0.8em;
 }
 
-#bannercontent h1{
-    font-weight:100;
+#bannercontent h1 {
+    font-weight: 100;
     font-family: 'Montserrat', sans-serif;
-    color:#f5f6f0;
-    /* color: #c19781; */
+    color: #f5f6f0;
     font-size: 2.4em;
-
-
+    text-align: left;
 }
 
-#bannercontent p{
-    
+#bannercontent p {
     font-family: 'Nanum Gothic', sans-serif;
-    color:#aecd61;
+    color: #aecd61;
+    text-align: left;
 }
-#bannercontent a{
+
+#bannercontent a {
     text-decoration: none;
-    color:#d8c2a7;
-    padding:0.2em;
+    color: #d8c2a7;
+    padding: 0.2em;
     display: inline-block;
 }
 
-#bannercontent a:hover{
+#bannercontent a:hover {
     text-decoration: underline;
 }
-#name{
-   font-weight: 600;
+
+#name {
+    font-weight: 600;
 }
 
-.bannerdivs{
-    display:inline-block;
-    padding:0.2em;
-    margin-left:200px;
-    animation: flyin 1 linear;
+.bannerdivs {
+    padding: 0.2em;
+    margin-left: 2em;
+    animation: flyin 1s linear;
     animation-delay: 1s;
 }
-.darkcontent{
-    display:block;
-    width:100vw;
-    padding:2em 12em;
+
+.darkcontent {
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    padding: 2em;
     line-height: 1.6;
-    margin:4vh auto;
-    animation:flyin 1.8s linear;
-}
-.darkcontent p{
-    margin-left: 4vw;
-}
-.subheading{
-    color:#aecd61;
-    font-size:2em;
+    margin: 4vh auto;
+    animation: flyin 1.8s linear;
 }
 
-.skilltopic{
-    
-    margin-right:4em;
-    padding:1rem;
-    font-family: 'Nanum Gothic', sans-serif; 
-    
-    
+.subheading {
+    color: #aecd61;
+    font-size: 2em;
+    text-align: left;
 }
-#about{
-    display:grid;
-    /* width:100vw; */
-    /* margin:16vh auto; */
+
+#about {
+    display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1.2em;
     max-width: 800px;
     padding: 1.2em;
-    /* margin-right:0px; */
-    /* margin-top:36px; */
-
+    margin: 8vh auto;
 }
 
-
-#aboutcontent{
+#aboutcontent {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
-#aboutmepicture img{
-    width: 10vw;
+#aboutmepicture img {
+    width: 75%;
+    max-width: 250px;
     height: auto;
-    border-radius: 10em;
+    border-radius: 50%;
 }
 
-#skills{
-    /* border:#aecd61 solid 0.01em; */
-    display:grid;
-   
-    /* margin:56px auto; */
-    grid-template-columns:1fr 1fr;
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0.04em;
-    /* max-width: 800px; */
-    
-
-
+    max-width: 800px;
+    margin: auto;
+    padding: 2em 0;
 }
-#skillimages img{
-    width:24vw;
+
+#skillimages img {
+    width: 100%;
     mix-blend-mode: multiply;
 }
-#skillcontent{
+
+#skillcontent {
     display: flex;
     flex-direction: column;
-    justify-content: left; /* Centers the text vertically */
-    width:48vw;
-    padding: 0.5em; 
+    justify-content: left;
+    width: 100%;
+    padding: 0.5em;
 }
-#skillimages{
-  padding-top:10vh;
+
+#skillimages {
+    padding-top: 10vh;
 }
-#publication a{
-    color:#aecd61;
-    margin : 0.5em;
+
+#publication a {
+    color: #aecd61;
+    margin: 0.5em;
     text-decoration: underline;
-
 }
-#resumedownload{
+
+#resumedownload {
     background-color: #aecd61;
-    color:#212121;
-    font-family:'Montserrat', sans-serif ;
-    padding:0.5rem;
+    color: #212121;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem;
     border: solid #aecd61 0.1rem;
-    border-radius:0.5rem;
-    font-weight:bold;
+    border-radius: 0.5rem;
+    font-weight: bold;
 }
-@keyframes flyin{
-    from{
-        opacity:0.25;
-        top:0px;
+.carousel-item img{
+    width:48vw;
+    margin-left:14em;
+   
+
+}
+.carousel-item:hover{
+transform:scale(1.5)
+}
+.carousel-inner{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    
+}
+.carousel-item {
+    
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    color:#212121;
+    background-color: #aecd61;
+    text-align: center;
+}
+footer img{
+    width:3em;
+    mix-blend-mode: multiply;
+}
+footer a{
+    text-decoration: none;
+    color:#4b582a;
+}
+
+/* Keyframes for animation */
+@keyframes flyin {
+    from {
+        opacity: 0.25;
+        top: 0px;
+    }
+    to {
+        opacity: 1;
+        top: 90px;
+    }
+}
+@keyframes zoomin{
+    0%{
+        transform:scale(1);
+
     }
 
+    50%{
+        transform:scale(1.5);
+    }
 
-    to{
-        opacity:1;
-        top:90px;
+    100%{
+        transform:scale(1);
     }
 }
 
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .darknav {
         height: auto;
@@ -274,6 +279,12 @@
     .darkcontent {
         padding: 1em;
     }
+
+    .carousel-item img{
+        width:40vw;
+       margin-left:9em;
+    
+    }
 }
 
 @media (max-width: 480px) {
@@ -298,5 +309,10 @@
 
     #skills {
         grid-template-columns: 1fr;
+    }
+    .carousel-item img{
+        width:24vw;
+       margin-left:4em;
+    
     }
 }
