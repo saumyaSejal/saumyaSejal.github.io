@@ -29,12 +29,14 @@ body{
     box-shadow: 0 0.8em 1em rgba(18, 17, 17, 0.1);
     margin-left:1em;
     
+    
 }
 #desc{
 color:burlywood;
 font-weight:2em;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 padding-top: 0.8em;
+margin: 0 auto;
 }
 
 .btn:hover{
@@ -113,6 +115,7 @@ width:4em
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.8em;
+        align-items: center;
         
         
     }
